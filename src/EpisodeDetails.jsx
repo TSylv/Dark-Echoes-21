@@ -3,8 +3,10 @@ export default function EpisodeDetails({ episode }) {
     return <p>Please select an episode to see more details.</p>;
   }
 
+  const title = episode.title ?? episode.name;
+
   return (
-    <div classname="episode-details">
+    <div className="episode-details">
       <h2>Episode {episode.number}</h2>
       <h3>{episode.name}</h3>
       <p>{episode.description}</p>
