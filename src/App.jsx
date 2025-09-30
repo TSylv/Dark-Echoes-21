@@ -1,25 +1,17 @@
-import { useState } from "react";
-import { episodeList } from "./data";
-import EpisodeList from "./EpisodeList";
-import EpisodeDetails from "./EpisodeDetails";
+import React, { useState } from "react";
+import showsData from "./data.js";
+import ShowSelection from "./ShowSelection.jsx";
+import ShowDetails from "./ShowDetails.jsx";
 
 export default function App() {
-  const [allEpisodes] = useState(episodeList);
-  const [selectedEpisode, setSelectedEpisode] = useState(null);
+  const [shows] = useState(showsData);
+  const [selectedShow, setSelectedShow] = useState(null);
 
   return (
     <div>
-      <h1>Dark Echoes</h1>
-
-      <div className="content">
-        <EpisodeList
-          episodes={allEpisodes}
-          selectedEpisode={selectedEpisode}
-          setSelectedEpisode={setSelectedEpisode}
-        />
-      </div>
-
-      <EpisodeDetails episode={selectedEpisode} />
+      <h1>React TV</h1>
+      <ShowSelection shows={shows} setSelectedShow={setSelectedShow} />
+      <ShowDetails show={selectedShow} />
     </div>
   );
 }

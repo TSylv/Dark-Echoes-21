@@ -48,3 +48,13 @@ export const episodeList = [
       "In the thrilling season finale, every truth comes to light, but the consequences are deadly.",
   },
 ];
+
+const shows = [
+  { name: "Pixel Wars",       episodes: episodeList },
+  { name: "Galactic Odyssey", episodes: episodeList },
+  { name: "Urban Legends",    episodes: episodeList },
+  { name: "Culinary Journeys",episodes: episodeList },
+  { name: "Code Breakers",    episodes: episodeList },
+];
+
+export default shows;
